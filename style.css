@@ -17,6 +17,25 @@
             transition: background-color 0.3s ease, color 0.3s ease;
         }
 
+        .btn-primary {
+            background-color: var(--ds-primary);
+            color: white;
+            border-radius: 50px;
+            padding: 10px 30px;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s;
+        }
+
+        .btn-primary:hover {
+            background: white;
+            border: 2px solid var(--ds-primary);
+            color: var(--ds-primary);
+
+        }
+
         /* Navbar Styling */
         .navbar {
             background-color: #ffffff;
@@ -253,8 +272,8 @@
 
         /* Link Ativo */
         .navbar-nav .nav-link.active {
-            color: #7C3AED !important;
-            background-color: rgba(124, 58, 237, 0.12);
+            color: white !important;
+            background-color: #7c3aed;
         }
 
         /* Estilo especial para o link de Sair no Mobile */
@@ -364,4 +383,172 @@
             .text-danger {
                 color: #ef4444 !important;
             }
+        }
+
+
+        /* perfil */
+
+        /* Header Card (Azul claro da imagem) */
+        .profile-header-card {
+            background-color: #ebf5ff;
+            border-radius: 24px;
+            border: 1px solid rgba(0, 123, 255, 0.1);
+        }
+
+        .profile-main-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid white;
+            object-fit: cover;
+        }
+
+        .id-pill {
+            background-color: #dbeafe;
+            color: #1e40af;
+            font-weight: 600;
+            padding: 6px 16px;
+        }
+
+        /* Info Cards */
+        .info-card {
+            background: white;
+            border-radius: 20px;
+            border: 1px solid #f1f5f9;
+            box-shadow: var(--card-shadow);
+        }
+
+        /* Icon Boxes */
+        .icon-box {
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .icon-box span {
+            font-size: 20px;
+        }
+
+        .blue-soft {
+            background: #e0f2fe;
+            color: #0369a1;
+        }
+
+        .purple-soft {
+            background: #f3e8ff;
+            color: #7e22ce;
+        }
+
+        .orange-soft {
+            background: #ffedd5;
+            color: #c2410c;
+        }
+
+        /* Avatares Pequenos */
+        .prof-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+        }
+
+        .smallest {
+            font-size: 0.75rem;
+        }
+
+        /* Botão Principal */
+
+
+        /* DARK MODE COMPATIBILITY */
+        [data-bs-theme="dark"] .info-card {
+            background-color: #1e293b;
+            border-color: #334155;
+        }
+
+        [data-bs-theme="dark"] .profile-header-card {
+            background-color: #1e293b;
+            border-color: #334155;
+        }
+
+        [data-bs-theme="dark"] body {
+            background-color: #0f172a;
+        }
+
+        /* Container da Navegação estilo Pílula */
+        .navbar-nav {
+            background-color: #f8f9fa;
+            /* Fundo sólido */
+            border-radius: 50px;
+            /* Formato arredondado total */
+            padding: 6px;
+            display: flex;
+            flex-direction: row;
+            /* Garante que fiquem lado a lado no desktop */
+            align-items: center;
+            gap: 4px;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Links Individuais */
+        .navbar-nav .nav-link {
+            color: #64748b !important;
+            font-weight: 600;
+            font-size: 0.9rem;
+            padding: 8px 20px !important;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+
+        /* Estado Ativo (O destaque preto da imagem) */
+        .navbar-nav .nav-link.active {
+            background-color: #7C3AED !important;
+            /* Cor sólida escura */
+            color: #ffffff !important;
+            /* Texto branco */
+        }
+
+        /* Responsividade Mobile */
+        @media (max-width: 991.98px) {
+
+            /* No mobile, o collapse não deve ter fundo, apenas a lista interna */
+            .navbar-collapse {
+                background: transparent !important;
+                border: none !important;
+                box-shadow: none !important;
+            }
+
+            .navbar-nav {
+                flex-direction: column;
+                /* Empilha no mobile */
+                border-radius: 20px;
+                /* Arredondamento menor para listas verticais */
+                padding: 10px;
+                width: 100%;
+                margin-top: 15px;
+            }
+
+            .navbar-nav .nav-link {
+                width: 100%;
+                text-align: center;
+                padding: 12px !important;
+            }
+
+            /* No mobile, a pílula ativa mantém o destaque mas ocupa a largura toda */
+            .navbar-nav .nav-link.active {
+                border-radius: 12px;
+            }
+        }
+
+        /* Ajuste para o Modo Escuro */
+        [data-bs-theme="dark"] .navbar-nav {
+            background-color: #0f172a;
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+
+        [data-bs-theme="dark"] .navbar-nav .nav-link.active {
+            background-color: #7C3AED !important;
+            /* Roxo para o modo escuro */
         }
