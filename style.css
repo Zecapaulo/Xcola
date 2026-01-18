@@ -1,0 +1,367 @@
+        /* --- DESIGN SYSTEM CUSTOMIZATION --- */
+        :root {
+            --bs-body-font-family: 'Nunito', sans-serif;
+            --ds-primary: #7C3AED;
+            /* Roxo da Marca */
+            --ds-green: #2ecc71;
+            --ds-yellow: #f1c40f;
+            --ds-blue: #3498db;
+            --ds-orange: #e67e22;
+            --ds-radius: 20px;
+            --bs-body-bg: #0f172a;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            /* Fundo claro padrão */
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* Navbar Styling */
+        .navbar {
+            background-color: #ffffff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+
+        .logo-box {
+            width: 40px;
+            height: 40px;
+            background-color: var(--ds-primary);
+            color: white;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1.2rem;
+            margin-right: 10px;
+        }
+
+        .nav-link {
+            font-weight: 700;
+            color: #6c757d;
+            margin: 0 5px;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--ds-primary) !important;
+        }
+
+        /* Profile Pill */
+        .profile-pill {
+            background-color: #f1f3f5;
+            border-radius: 50px;
+            padding: 5px 15px 5px 5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border: 1px solid #dee2e6;
+            cursor: pointer;
+        }
+
+        .profile-container-mobile {
+            background-color: #f1f3f5;
+            border-radius: 50px;
+            padding: 5px 15px 5px 5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border: 1px solid #dee2e6;
+            cursor: pointer;
+        }
+
+        .profile-avatar {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--ds-primary);
+        }
+
+        /* Cards Styling - O Coração do Design */
+        .ds-card {
+            border: none;
+            border-radius: var(--ds-radius);
+            position: relative;
+            overflow: hidden;
+            /* Corta o ícone de fundo */
+            padding: 2rem;
+            height: 100%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .ds-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Cores dos Cards */
+        .card-green {
+            background-color: var(--ds-green);
+            color: white;
+        }
+
+        .card-yellow {
+            background-color: var(--ds-yellow);
+            color: #212529;
+        }
+
+        .card-blue {
+            background-color: var(--ds-blue);
+            color: white;
+        }
+
+        .card-orange {
+            background-color: var(--ds-orange);
+            color: white;
+        }
+
+        /* Icon Box dentro do Card */
+        .icon-box {
+            width: 60px;
+            height: 60px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+        }
+
+        .card-green .icon-box {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .card-yellow .icon-box {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+
+        .card-blue .icon-box {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .card-orange .icon-box {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Watermark (Ícone grande no fundo) */
+        .card-watermark {
+            position: absolute;
+            right: -25px;
+            bottom: -35px;
+            font-size: 9rem;
+            opacity: 0.15;
+            transform: rotate(-10deg);
+            pointer-events: none;
+            /* Deixa clicar através dele */
+            transition: transform 0.5s ease;
+        }
+
+        .ds-card:hover .card-watermark {
+            transform: rotate(-10deg) scale(1.1);
+        }
+
+        /* Setas */
+        .arrow-icon {
+            opacity: 0.7;
+            font-size: 2rem;
+        }
+
+        /* Bottom Button */
+        .btn-help {
+            border: 2px solid var(--ds-primary);
+            color: var(--ds-primary);
+            background: white;
+            border-radius: 50px;
+            padding: 10px 30px;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s;
+        }
+
+        .btn-help:hover {
+            background-color: var(--ds-primary);
+            color: white;
+        }
+
+        /* --- DARK MODE OVERRIDES --- */
+        [data-bs-theme="dark"] body {
+            background-color: #0f172a;
+            /* Slate Dark */
+        }
+
+        [data-bs-theme="dark"] .navbar {
+            background-color: #1e293b;
+            border-bottom: 1px solid #334155;
+            box-shadow: none;
+        }
+
+        [data-bs-theme="dark"] .text-muted {
+            color: #94a3b8 !important;
+        }
+
+        [data-bs-theme="dark"] .nav-link {
+            color: #cbd5e1;
+        }
+
+        [data-bs-theme="dark"] .profile-pill {
+            background-color: #334155;
+            border-color: #475569;
+            color: #f8fafc;
+        }
+
+        [data-bs-theme="dark"] .btn-help {
+            background-color: transparent;
+            color: #a78bfa;
+            border-color: #a78bfa;
+        }
+
+        [data-bs-theme="dark"] .btn-help:hover {
+            background-color: #a78bfa;
+            color: #0f172a;
+        }
+
+        /* Estilização Geral da Navbar Nav */
+        .navbar-nav {
+            gap: 0.5rem;
+            /* Espaço entre os itens */
+        }
+
+        /* Estilo dos Links */
+        .navbar-nav .nav-link {
+            font-weight: 500;
+            color: var(--bs-secondary-color);
+            padding: 0.8rem 1.2rem !important;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        /* Efeito de Hover (Passar o rato) */
+        .navbar-nav .nav-link:hover {
+            color: #7C3AED !important;
+            /* Cor roxa da tua marca */
+            background-color: rgba(124, 58, 237, 0.08);
+            /* Fundo subtil */
+        }
+
+        /* Link Ativo */
+        .navbar-nav .nav-link.active {
+            color: #7C3AED !important;
+            background-color: rgba(124, 58, 237, 0.12);
+        }
+
+        /* Estilo especial para o link de Sair no Mobile */
+        .navbar-nav .nav-link.text-danger {
+            color: #ef4444 !important;
+            /* Vermelho vibrante */
+        }
+
+        .navbar-nav .nav-link.text-danger:hover {
+            background-color: rgba(239, 68, 68, 0.08) !important;
+        }
+
+        /* Ajuste para alinhar ícones com texto no text-end */
+        .navbar-nav .nav-link span {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        /* Remove a seta padrão do Bootstrap no dropdown */
+        .profile-pill.dropdown-toggle::after {
+            display: none;
+        }
+
+        /* Estilização do Menu Dropdown para combinar com o teu Dark Mode */
+        [data-bs-theme="dark"] .dropdown-menu {
+            background-color: #111827;
+            /* Mesma cor do teu menu mobile */
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .dropdown-item {
+            color: #94a3b8;
+            font-size: 0.9rem;
+            padding: 10px 20px;
+            transition: all 0.2s;
+        }
+
+        .dropdown-item:hover {
+            background-color: rgba(124, 58, 237, 0.1);
+            /* Roxo subtil */
+            color: #a78bfa;
+        }
+
+        .dropdown-item.text-danger:hover {
+            background-color: rgba(239, 68, 68, 0.1);
+            color: #ef4444;
+        }
+
+        /* Garante que o menu não fique colado ao topo */
+        .dropdown-menu {
+            border-radius: 12px;
+            padding: 8px;
+            min-width: 180px;
+        }
+
+        /* Ajustes específicos para Mobile (dentro do collapse) */
+        @media (max-width: 991.98px) {
+
+            /* Ajuste do Container do Menu (o "Card" que aparece no print) */
+            @media (max-width: 991.98px) {
+                .navbar-collapse {
+                    background-color: #111827;
+                    /* Um tom de azul muito escuro/preto */
+                    border: 1px solid rgba(255, 255, 255, 0.1);
+                    border-radius: 12px;
+                    margin-top: 10px;
+                    padding: 15px 0;
+                    /* Removemos padding lateral para o destaque colar na borda */
+                    overflow: hidden;
+                }
+
+                /* Estilo base dos links */
+                .navbar-nav .nav-link {
+                    color: #94a3b8 !important;
+                    /* Cor cinza suave */
+                    padding: 12px 25px !important;
+                    font-size: 0.95rem;
+                    transition: all 0.2s ease;
+                }
+
+                /* Item Ativo (Dashboards no teu print) */
+                .navbar-nav .nav-link.active {
+                    color: #a78bfa !important;
+                    /* Roxo claro */
+                    background-color: rgba(124, 58, 237, 0.15);
+                    /* Fundo roxo subtil */
+                    border-right: 4px solid #7C3AED;
+                    /* A barra vertical roxa que vês no print */
+                }
+
+                /* Separador */
+                .navbar-collapse hr {
+                    border-top: 1px solid rgba(255, 255, 255, 0.1);
+                    margin: 15px 25px;
+                    opacity: 1;
+                }
+
+                /* Alinhamento dos ícones (Perfil e Sair) */
+                .navbar-nav .nav-link .material-icons-round {
+                    font-size: 20px;
+                    margin-left: 10px;
+                    /* Espaço entre texto e ícone à direita */
+                }
+            }
+
+            /* Cor do Sair */
+            .text-danger {
+                color: #ef4444 !important;
+            }
+        }
