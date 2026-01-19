@@ -553,3 +553,270 @@
             background-color: #7C3AED !important;
             /* Roxo para o modo escuro */
         }
+
+
+
+
+        /* --- CONFIGURAÇÕES GERAIS E VARIÁVEIS --- */
+        :root {
+            --bg-body: #f8fafc;
+            --text-main: #1e293b;
+            --text-sec: #64748b;
+            --card-green-grad: linear-gradient(135deg, #4ade80 0%, #22c55e 100%);
+            --blue-play: #0ea5e9;
+
+            /* Variáveis que mudam com o tema */
+            --card-bg: #ffffff;
+            --audio-item-bg: #f8fafc;
+            --audio-item-border: transparent;
+            --back-btn-bg: #ffffff;
+            --back-btn-border: #e2e8f0;
+            --icon-arrow-color: #1e293b;
+        }
+
+        body {
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* --- MODO ESCURO (CUSTOMIZADO IGUAL À IMAGEM) --- */
+        [data-bs-theme="dark"] {
+            --bg-body: #0f172a;
+            /* Fundo Navy Escuro */
+            --text-main: #f1f5f9;
+            /* Texto Branco */
+            --text-sec: #94a3b8;
+            /* Texto Secundário Cinza Claro */
+
+            --card-bg: #1e293b;
+            /* Card Áudios Escuro */
+            --audio-item-bg: #334155;
+            /* Item Áudio (Slate 700) */
+            --audio-item-border: #475569;
+
+            --back-btn-bg: #1e293b;
+            --back-btn-border: #334155;
+            --icon-arrow-color: #ffffff;
+        }
+
+        /* Ajustes forçados de texto para Dark Mode */
+        [data-bs-theme="dark"] .text-dark {
+            color: #ffffff !important;
+        }
+
+        [data-bs-theme="dark"] .text-secondary {
+            color: #94a3b8 !important;
+        }
+
+        /* --- COMPONENTES --- */
+
+        /* 1. Botão Voltar */
+        .btn-back {
+            width: 45px;
+            height: 45px;
+            background: var(--back-btn-bg);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            border: 1px solid var(--back-btn-border);
+            transition: all 0.2s;
+        }
+
+        .btn-back .material-icons-round {
+            color: var(--icon-arrow-color);
+        }
+
+        .btn-back:hover {
+            transform: translateX(-3px);
+        }
+
+        /* 2. Card Verde (TPC) - Sempre Verde, mesmo no escuro */
+        .tpc-card {
+            background: var(--card-green-grad);
+            border-radius: 30px;
+            padding: 30px;
+            box-shadow: 0 20px 40px rgba(34, 197, 94, 0.2);
+            min-height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* IMPORTANTE: Os itens dentro do card verde permanecem brancos no Dark Mode */
+        .tpc-item.bg-white {
+            background-color: #ffffff !important;
+            color: #1e293b !important;
+        }
+
+        /* Garante que o texto dentro dos cards brancos (no verde) seja sempre escuro */
+        [data-bs-theme="dark"] .tpc-item.bg-white h6,
+        [data-bs-theme="dark"] .tpc-item.bg-white span {
+            color: #1e293b !important;
+        }
+
+        .tpc-item {
+            padding: 16px 20px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            transition: transform 0.2s;
+        }
+
+        .tpc-item:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Check Circles */
+        .check-circle {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            border: 2px solid #e2e8f0;
+            flex-shrink: 0;
+        }
+
+        /* Item Concluído (Verde Escuro Transparente) */
+        .item-done {
+            background-color: rgba(21, 128, 61, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .check-circle-done {
+            width: 28px;
+            height: 28px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #16a34a;
+        }
+
+        [data-bs-theme="dark"] .item-done h6 {
+            color: white !important;
+        }
+
+        [data-bs-theme="dark"] .item-done span {
+            color: rgba(255, 255, 255, 0.7) !important;
+        }
+
+        /* Quadrado Ícone Verde */
+        .icon-square-green {
+            width: 48px;
+            height: 48px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(4px);
+        }
+
+        /* Fundo Decorativo Livro */
+        .decorative-book-bg {
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            width: 150px;
+            height: 150px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        /* 3. Card de Áudios (Muda de cor no Dark Mode) */
+        .audio-main-card {
+            background: var(--card-bg);
+            border-radius: 30px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            transition: background-color 0.3s ease;
+        }
+
+        /* Quadrado Ícone Azul */
+        .icon-square-blue {
+            width: 48px;
+            height: 48px;
+            background: rgba(14, 165, 233, 0.1);
+            /* Transparente para funcionar no escuro */
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        [data-bs-theme="dark"] .icon-square-blue {
+            background: rgba(14, 165, 233, 0.2);
+        }
+
+        /* Itens de Áudio */
+        .audio-item {
+            background: var(--audio-item-bg);
+            padding: 16px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            border: 1px solid var(--audio-item-border);
+            transition: all 0.2s;
+        }
+
+        /* Botão Play */
+        .btn-play {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            border: none;
+            background: var(--blue-play);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        /* Play Outline e Disabled */
+        .btn-play-outline {
+            background: transparent;
+            border: 2px solid var(--blue-play);
+            color: var(--blue-play);
+        }
+
+        .btn-play-disabled {
+            background: #cbd5e1;
+            color: #94a3b8;
+        }
+
+        [data-bs-theme="dark"] .btn-play-disabled {
+            background: #475569;
+            color: #64748b;
+        }
+
+        /* Áudio Ouvido */
+        .bg-light-gray {
+            background-color: #f1f5f9;
+        }
+
+        [data-bs-theme="dark"] .bg-light-gray {
+            background-color: rgba(255, 255, 255, 0.05);
+            /* Bem subtil no escuro */
+        }
+
+        /* Botão Ajuda */
+        .btn-help {
+            border: 1px solid #7C3AED;
+            color: #7C3AED;
+            background: transparent;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .btn-help:hover {
+            background: #7C3AED;
+            color: white;
+        }
