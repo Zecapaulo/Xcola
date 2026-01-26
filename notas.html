@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="pt" data-bs-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeiSchool Dashboard</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <div class="logo-box">D</div>
+                <span class="fw-bold fs-4" style="letter-spacing: -0.5px;">DeiSchool</span>
+            </a>
+
+            <button class="d-lg-none btn btn-link text-decoration-none p-0 theme-toggle-btn ms-auto me-2"
+                style="color: #64748b;">
+                <span class="material-icons-round fs-3 theme-icon-content text-warning">light_mode</span>
+            </button>
+
+            <button class="navbar-toggler border-0 p-0" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+                <div class="profile-container-mobile">
+                    <img src="https://i.pravatar.cc/150?img=5" alt="Mamã" class="profile-avatar"
+                        style="width: 32px; height: 32px; border-radius: 50%; border: 2px solid #7C3AED;">
+                    <span class="fw-bold text-dark dark:text-white" style="font-size: 0.9rem;">Mamã</span>
+                </div>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto text-end">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Dashboards</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Mensagens</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Eventos</a>
+                    </li>
+
+                    <hr>
+                    <li class="nav-item d-lg-none">
+                        <a class="nav-link d-flex align-items-center justify-content-end" href="profile.html">
+                            Meu Perfil <span class="material-icons-round">account_circle</span>
+                        </a>
+                    </li>
+                    <li class="nav-item d-lg-none">
+                        <a class="nav-link d-flex align-items-center justify-content-end text-danger" href="#">
+                            Sair <span class="material-icons-round">logout</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="d-none d-lg-flex align-items-center gap-3 ms-lg-3">
+                    <button class="btn btn-link text-decoration-none p-0 theme-toggle-btn" style="color: #64748b;">
+                        <span class="material-icons-round fs-3 theme-icon-content text-warning">light_mode</span>
+                    </button>
+
+                    <div class="dropdown">
+                        <div class="profile-pill dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"
+                            style="cursor: pointer;">
+                            <img src="https://i.pravatar.cc/150?img=5" alt="Avatar" class="profile-avatar">
+                            <span class="fw-bold pe-2 fs-6">Mamã</span>
+                        </div>
+
+                        <ul class="dropdown-menu dropdown-menu-end shadow-lg border-0 mt-2">
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center gap-2 py-2" href="profile.html">
+                                    <span class="material-icons-round fs-5">account_circle</span> Meu Perfil
+                                </a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider opacity-10">
+                            </li>
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center gap-2 py-2 text-danger" href="#">
+                                    <span class="material-icons-round fs-5">logout</span> Sair
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </nav>
+    <main class="container py-5">
+
+        <div class="row align-items-center mb-5 g-3">
+            <div class="col-12 col-md-8">
+                <div class="d-flex align-items-start gap-3">
+                    <a href="caderno.html" class="btn-back shadow-sm flex-shrink-0">
+                        <span class="material-icons-round text-dark">arrow_back</span>
+                    </a>
+                    <div>
+                        <h2 class="fw-bold mb-1 text-dark">As Notas do João</h2>
+                        <p class="text-secondary mb-0">Resumo do Desempenho Escolar • 3º Bimestre</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 text-md-end">
+                <div class="frequency-badge d-inline-flex">
+                    <span class="material-icons-round fs-5 me-2">analytics</span>
+                    <div>
+                        <span class="d-block x-small fw-bold opacity-75">FREQUÊNCIA</span>
+                        <span class="fw-bold fs-5">92% Presente</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4 mb-5">
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="grade-card status-green">
+                    <div class="d-flex justify-content-between mb-3">
+                        <h5 class="fw-bold text-dark">Português</h5>
+                        <div class="icon-stamp bg-green-light text-green">
+                            <span class="material-icons-round">thumb_up</span>
+                        </div>
+                    </div>
+                    <div class="text-center mb-3">
+                        <h1 class="display-3 fw-bold text-dark mb-0">8.5</h1>
+                        <span class="badge bg-green-light text-green rounded-pill px-3 py-2">
+                            <span class="material-icons-round fs-6 align-middle me-1">check_circle</span> Muito Bom!
+                        </span>
+                    </div>
+                    <button class="btn btn-details w-100">Ver Detalhes <span
+                            class="material-icons-round fs-6 ms-1">arrow_forward</span></button>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="grade-card status-red">
+                    <div class="d-flex justify-content-between mb-3">
+                        <h5 class="fw-bold text-dark">Matemática</h5>
+                        <div class="icon-stamp bg-red-light text-red">
+                            <span class="material-icons-round">priority_high</span>
+                        </div>
+                    </div>
+                    <div class="text-center mb-3">
+                        <h1 class="display-3 fw-bold text-dark mb-0">4.5</h1>
+                        <span class="badge bg-red-light text-red rounded-pill px-3 py-2">
+                            <span class="material-icons-round fs-6 align-middle me-1">warning</span> Precisa Estudar
+                        </span>
+                    </div>
+                    <button class="btn btn-details w-100">Ver Detalhes <span
+                            class="material-icons-round fs-6 ms-1">arrow_forward</span></button>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="grade-card status-yellow">
+                    <div class="d-flex justify-content-between mb-3">
+                        <h5 class="fw-bold text-dark">Ciências</h5>
+                        <div class="icon-stamp bg-yellow-light text-yellow">
+                            <span class="material-icons-round">remove</span>
+                        </div>
+                    </div>
+                    <div class="text-center mb-3">
+                        <h1 class="display-3 fw-bold text-dark mb-0">6.5</h1>
+                        <span class="badge bg-yellow-light text-yellow rounded-pill px-3 py-2">
+                            <span class="material-icons-round fs-6 align-middle me-1">info</span> Na Média
+                        </span>
+                    </div>
+                    <button class="btn btn-details w-100">Ver Detalhes <span
+                            class="material-icons-round fs-6 ms-1">arrow_forward</span></button>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="grade-card status-green">
+                    <div class="d-flex justify-content-between mb-3">
+                        <h5 class="fw-bold text-dark">História</h5>
+                        <div class="icon-stamp bg-green-light text-green">
+                            <span class="material-icons-round">emoji_events</span>
+                        </div>
+                    </div>
+                    <div class="text-center mb-3">
+                        <h1 class="display-3 fw-bold text-dark mb-0">9.2</h1>
+                        <span class="badge bg-green-light text-green rounded-pill px-3 py-2">
+                            <span class="material-icons-round fs-6 align-middle me-1">star</span> Excelente!
+                        </span>
+                    </div>
+                    <button class="btn btn-details w-100">Ver Detalhes <span
+                            class="material-icons-round fs-6 ms-1">arrow_forward</span></button>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="grade-card status-yellow">
+                    <div class="d-flex justify-content-between mb-3">
+                        <h5 class="fw-bold text-dark">Geografia</h5>
+                        <div class="icon-stamp bg-yellow-light text-yellow">
+                            <span class="material-icons-round">remove</span>
+                        </div>
+                    </div>
+                    <div class="text-center mb-3">
+                        <h1 class="display-3 fw-bold text-dark mb-0">6.0</h1>
+                        <span class="badge bg-yellow-light text-yellow rounded-pill px-3 py-2">
+                            <span class="material-icons-round fs-6 align-middle me-1">info</span> Na Média
+                        </span>
+                    </div>
+                    <button class="btn btn-details w-100">Ver Detalhes <span
+                            class="material-icons-round fs-6 ms-1">arrow_forward</span></button>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="grade-card status-green">
+                    <div class="d-flex justify-content-between mb-3">
+                        <h5 class="fw-bold text-dark">Artes</h5>
+                        <div class="icon-stamp bg-green-light text-green">
+                            <span class="material-icons-round">palette</span>
+                        </div>
+                    </div>
+                    <div class="text-center mb-3">
+                        <h1 class="display-3 fw-bold text-dark mb-0">9.5</h1>
+                        <span class="badge bg-green-light text-green rounded-pill px-3 py-2">
+                            <span class="material-icons-round fs-6 align-middle me-1">check_circle</span> Excelente!
+                        </span>
+                    </div>
+                    <button class="btn btn-details w-100">Ver Detalhes <span
+                            class="material-icons-round fs-6 ms-1">arrow_forward</span></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12">
+            <div class="chart-card">
+                <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+                    <div>
+                        <h5 class="fw-bold text-dark mb-1">Progresso do Ano</h5>
+                        <p class="text-secondary small mb-0">Evolução da média geral do João</p>
+                    </div>
+                    <div class="d-flex gap-3 small">
+                        <div class="d-flex align-items-center gap-1"><span class="dot-legend bg-success"></span> <span
+                                class="text-secondary">Bom</span></div>
+                        <div class="d-flex align-items-center gap-1"><span class="dot-legend bg-warning"></span> <span
+                                class="text-secondary">Médio</span></div>
+                        <div class="d-flex align-items-center gap-1"><span class="dot-legend bg-danger"></span> <span
+                                class="text-secondary">Atenção</span></div>
+                    </div>
+                </div>
+
+                <div class="chart-container">
+                    <div class="chart-grid-line" style="top: 0%"></div>
+                    <div class="chart-grid-line" style="top: 33%"></div>
+                    <div class="chart-grid-line" style="top: 66%"></div>
+                    <div class="chart-grid-line" style="top: 100%"></div>
+
+                    <div class="chart-bars-wrapper">
+
+                        <div class="chart-column">
+                            <div class="bar-fill bg-warning" style="height: 65%;"></div>
+                            <span class="x-axis-label">1º Bim</span>
+                        </div>
+
+                        <div class="chart-column">
+                            <div class="bar-fill bg-danger" style="height: 45%;"></div>
+                            <span class="x-axis-label">2º Bim</span>
+                        </div>
+
+                        <div class="chart-column">
+                            <div class="bar-fill bg-warning" style="height: 60%;"></div>
+                            <span class="x-axis-label">3º Bim</span>
+                        </div>
+
+                        <div class="chart-column">
+                            <div class="floating-tag" style="bottom: 82% + 10px;">
+                                8.2
+                            </div>
+                            <div class="bar-fill bg-success-soft" style="height: 82%;"></div>
+                            <span class="x-axis-label fw-bold text-dark">4º Bim</span>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="text-center mt-5">
+            <button class="btn btn-help rounded-pill px-4 py-2">
+                <span class="material-icons-round me-2">help_outline</span> Precisa de Ajuda?
+            </button>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

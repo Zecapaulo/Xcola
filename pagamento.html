@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt" data-bs-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeiSchool Dashboard</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <div class="logo-box">D</div>
+                <span class="fw-bold fs-4" style="letter-spacing: -0.5px;">DeiSchool</span>
+            </a>
+
+            <button class="d-lg-none btn btn-link text-decoration-none p-0 theme-toggle-btn ms-auto me-2"
+                style="color: #64748b;">
+                <span class="material-icons-round fs-3 theme-icon-content text-warning">light_mode</span>
+            </button>
+
+            <button class="navbar-toggler border-0 p-0" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+                <div class="profile-container-mobile">
+                    <img src="https://i.pravatar.cc/150?img=5" alt="Mamã" class="profile-avatar"
+                        style="width: 32px; height: 32px; border-radius: 50%; border: 2px solid #7C3AED;">
+                    <span class="fw-bold text-dark dark:text-white" style="font-size: 0.9rem;">Mamã</span>
+                </div>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto text-end">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Dashboards</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Mensagens</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Eventos</a>
+                    </li>
+
+                    <hr>
+                    <li class="nav-item d-lg-none">
+                        <a class="nav-link d-flex align-items-center justify-content-end" href="profile.html">
+                            Meu Perfil <span class="material-icons-round">account_circle</span>
+                        </a>
+                    </li>
+                    <li class="nav-item d-lg-none">
+                        <a class="nav-link d-flex align-items-center justify-content-end text-danger" href="#">
+                            Sair <span class="material-icons-round">logout</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="d-none d-lg-flex align-items-center gap-3 ms-lg-3">
+                    <button class="btn btn-link text-decoration-none p-0 theme-toggle-btn" style="color: #64748b;">
+                        <span class="material-icons-round fs-3 theme-icon-content text-warning">light_mode</span>
+                    </button>
+
+                    <div class="dropdown">
+                        <div class="profile-pill dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"
+                            style="cursor: pointer;">
+                            <img src="https://i.pravatar.cc/150?img=5" alt="Avatar" class="profile-avatar">
+                            <span class="fw-bold pe-2 fs-6">Mamã</span>
+                        </div>
+
+                        <ul class="dropdown-menu dropdown-menu-end shadow-lg border-0 mt-2">
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center gap-2 py-2" href="profile.html">
+                                    <span class="material-icons-round fs-5">account_circle</span> Meu Perfil
+                                </a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider opacity-10">
+                            </li>
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center gap-2 py-2 text-danger" href="#">
+                                    <span class="material-icons-round fs-5">logout</span> Sair
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </nav>
+    <main class="container py-5">
+
+        <div class="d-flex align-items-center gap-3 mb-5">
+            <a href="caderno.html" class="btn-back shadow-sm">
+                <span class="material-icons-round text-dark">arrow_back</span>
+            </a>
+            <div>
+                <h2 class="fw-bold mb-0 text-dark">Pagamentos</h2>
+                <p class="text-secondary mb-0">via M-Pesa</p>
+            </div>
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-12 col-lg-7">
+
+                <div class="payment-card mb-4">
+                    <div class="d-flex justify-content-between align-items-start mb-2">
+                        <span class="text-secondary fw-medium">Pagamento da Escola</span>
+                        <span class="badge badge-pending">
+                            <span class="dot-pending"></span> PENDENTE
+                        </span>
+                    </div>
+
+                    <h3 class="fw-bold text-dark mb-4">Propina de Março</h3>
+
+                    <div class="dashed-divider mb-4"></div>
+
+                    <div class="d-flex align-items-baseline gap-1 mb-4">
+                        <h1 class="display-4 fw-bold text-green mb-0">2.500</h1>
+                        <span class="fs-4 fw-bold text-dark">MT</span>
+                    </div>
+
+                    <div class="info-box">
+                        <span class="material-icons-round text-primary fs-5">info</span>
+                        <p class="mb-0 small text-secondary lh-sm">
+                            Este pagamento cobre as aulas, materiais básicos e alimentação para o mês de Março.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="payment-card">
+                    <h5 class="fw-bold text-dark mb-3">Seu número M-Pesa</h5>
+
+                    <div class="mpesa-input-wrapper mb-3">
+                        <span class="material-icons-round input-icon">smartphone</span>
+                        <input type="text" class="form-control mpesa-input" value="84 123 4567"
+                            placeholder="84 xxx xxxx">
+                    </div>
+
+                    <p class="text-secondary small mb-4">Você receberá uma confirmação no seu telemóvel.</p>
+
+                    <button class="btn btn-mpesa w-100 shadow-sm">
+                        <span class="material-icons-round me-2">payments</span> Pagar Agora
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="col-12 col-lg-5">
+
+                <div class="payment-card mb-4 h-auto">
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h5 class="fw-bold text-dark mb-0">Histórico Recente</h5>
+                        <a href="#" class="text-green fw-bold text-decoration-none small">Ver tudo</a>
+                    </div>
+
+                    <div class="d-flex flex-column gap-3">
+                        <div class="history-item">
+                            <div class="icon-circle-success">
+                                <span class="material-icons-round fs-5">check</span>
+                            </div>
+                            <div class="flex-grow-1">
+                                <h6 class="fw-bold text-dark mb-0">Fevereiro</h6>
+                                <span class="text-secondary x-small">Pago em 02/02/2024</span>
+                            </div>
+                            <div class="text-end">
+                                <span class="d-block fw-bold text-dark">2.500</span>
+                                <span class="d-block x-small text-secondary fw-bold">MT</span>
+                            </div>
+                        </div>
+
+                        <div class="history-item">
+                            <div class="icon-circle-success">
+                                <span class="material-icons-round fs-5">check</span>
+                            </div>
+                            <div class="flex-grow-1">
+                                <h6 class="fw-bold text-dark mb-0">Janeiro</h6>
+                                <span class="text-secondary x-small">Pago em 05/01/2024</span>
+                            </div>
+                            <div class="text-end">
+                                <span class="d-block fw-bold text-dark">2.500</span>
+                                <span class="d-block x-small text-secondary fw-bold">MT</span>
+                            </div>
+                        </div>
+
+                        <div class="history-item">
+                            <div class="icon-circle-success">
+                                <span class="material-icons-round fs-5">check</span>
+                            </div>
+                            <div class="flex-grow-1">
+                                <h6 class="fw-bold text-dark mb-0">Matrícula</h6>
+                                <span class="text-secondary x-small">Pago em 15/12/2023</span>
+                            </div>
+                            <div class="text-end">
+                                <span class="d-block fw-bold text-dark">5.000</span>
+                                <span class="d-block x-small text-secondary fw-bold">MT</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="help-card text-center">
+                    <div class="help-icon-circle mb-3 mx-auto">
+                        <span class="material-icons-round text-success fs-3">support_agent</span>
+                    </div>
+                    <h6 class="fw-bold text-dark mb-2">Precisa de Ajuda?</h6>
+                    <p class="text-secondary small mb-3 px-2">
+                        Se tiver dificuldades com o pagamento, fale com a nossa equipe.
+                    </p>
+                    <a href="#" class="text-success fw-bold text-decoration-none small">
+                        Ligar para Suporte <span class="material-icons-round fs-6 align-middle">open_in_new</span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

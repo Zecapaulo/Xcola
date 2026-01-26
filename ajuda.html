@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt" data-bs-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeiSchool Dashboard</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <div class="logo-box">D</div>
+                <span class="fw-bold fs-4" style="letter-spacing: -0.5px;">DeiSchool</span>
+            </a>
+
+            <button class="d-lg-none btn btn-link text-decoration-none p-0 theme-toggle-btn ms-auto me-2"
+                style="color: #64748b;">
+                <span class="material-icons-round fs-3 theme-icon-content text-warning">light_mode</span>
+            </button>
+
+            <button class="navbar-toggler border-0 p-0" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+                <div class="profile-container-mobile">
+                    <img src="https://i.pravatar.cc/150?img=5" alt="Mamã" class="profile-avatar"
+                        style="width: 32px; height: 32px; border-radius: 50%; border: 2px solid #7C3AED;">
+                    <span class="fw-bold text-dark dark:text-white" style="font-size: 0.9rem;">Mamã</span>
+                </div>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto text-end">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Dashboards</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Mensagens</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Eventos</a>
+                    </li>
+
+                    <hr>
+                    <li class="nav-item d-lg-none">
+                        <a class="nav-link d-flex align-items-center justify-content-end" href="profile.html">
+                            Meu Perfil <span class="material-icons-round">account_circle</span>
+                        </a>
+                    </li>
+                    <li class="nav-item d-lg-none">
+                        <a class="nav-link d-flex align-items-center justify-content-end text-danger" href="#">
+                            Sair <span class="material-icons-round">logout</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="d-none d-lg-flex align-items-center gap-3 ms-lg-3">
+                    <button class="btn btn-link text-decoration-none p-0 theme-toggle-btn" style="color: #64748b;">
+                        <span class="material-icons-round fs-3 theme-icon-content text-warning">light_mode</span>
+                    </button>
+
+                    <div class="dropdown">
+                        <div class="profile-pill dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"
+                            style="cursor: pointer;">
+                            <img src="https://i.pravatar.cc/150?img=5" alt="Avatar" class="profile-avatar">
+                            <span class="fw-bold pe-2 fs-6">Mamã</span>
+                        </div>
+
+                        <ul class="dropdown-menu dropdown-menu-end shadow-lg border-0 mt-2">
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center gap-2 py-2" href="profile.html">
+                                    <span class="material-icons-round fs-5">account_circle</span> Meu Perfil
+                                </a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider opacity-10">
+                            </li>
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center gap-2 py-2 text-danger" href="#">
+                                    <span class="material-icons-round fs-5">logout</span> Sair
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </nav>
+    <main class="container py-5">
+        <div class="d-flex align-items-center gap-3 mb-5">
+            <a href="index.html" class="btn-back shadow-sm">
+                <span class="material-icons-round text-dark">arrow_back</span>
+            </a>
+            <div>
+                <h2 class="fw-bold mb-0 text-dark">Centro de Ajuda</h2>
+                <p class="text-secondary mb-0">Como podemos ajudar você hoje?</p>
+            </div>
+        </div>
+
+        <div class="row g-4 mb-5">
+            <div class="col-12 col-md-4">
+                <div class="help-action-card h-100">
+                    <span class="material-icons-round help-watermark">call</span>
+                    <div class="icon-circle bg-green-soft text-green mb-4">
+                        <span class="material-icons-round">call</span>
+                    </div>
+                    <h5 class="fw-bold text-dark">Falar com a Escola</h5>
+                    <p class="text-secondary small mb-4">Ligue para nós agora mesmo para resolver dúvidas urgentes.</p>
+                    <button class="btn btn-help-green w-100">
+                        <span class="material-icons-round fs-6 me-2">call</span> Ligar Agora
+                    </button>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+                <div class="help-action-card h-100">
+                    <span class="material-icons-round help-watermark">chat_bubble</span>
+                    <div class="icon-circle bg-green-whatsapp-soft text-whatsapp mb-4">
+                        <span class="material-icons-round">chat_bubble</span>
+                    </div>
+                    <h5 class="fw-bold text-dark">Mensagem WhatsApp</h5>
+                    <p class="text-secondary small mb-4">Envie uma mensagem direta para a secretaria da escola.</p>
+                    <button class="btn btn-help-whatsapp w-100">
+                        <span class="material-icons-round fs-6 me-2">send</span> Enviar Mensagem
+                    </button>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+                <div class="help-action-card h-100">
+                    <span class="material-icons-round help-watermark">play_circle</span>
+                    <div class="icon-circle bg-blue-soft text-primary mb-4">
+                        <span class="material-icons-round">play_arrow</span>
+                    </div>
+                    <h5 class="fw-bold text-dark">Ver Vídeos de Ajuda</h5>
+                    <p class="text-secondary small mb-4">Assista tutoriais simples de como usar o aplicativo.</p>
+                    <button class="btn btn-help-blue w-100">
+                        <span class="material-icons-round fs-6 me-2">play_arrow</span> Assistir Vídeos
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-container shadow-sm p-4 p-md-5">
+            <div class="d-flex align-items-center gap-2 mb-4">
+                <div class="vertical-bar-green"></div>
+                <h4 class="fw-bold text-dark mb-0">Perguntas Frequentes</h4>
+            </div>
+
+            <div class="accordion accordion-flush" id="faqAccordion">
+                <div class="accordion-item mb-3">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#q1">
+                            <span class="material-icons-round text-green me-3">restart_alt</span>
+                            Esqueci a minha senha
+                        </button>
+                    </h2>
+                    <div id="q1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body text-secondary">
+                            Para recuperar sua senha, clique em "Esqueci minha senha" na tela de login e siga as
+                            instruções
+                            enviadas para o seu e-mail cadastrado.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item mb-3">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#q2">
+                            <span class="material-icons-round text-green me-3">payments</span>
+                            Como pagar a mensalidade?
+                        </button>
+                    </h2>
+                    <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body text-secondary">
+                            Os pagamentos podem ser feitos via M-Pesa diretamente na seção "Pagamentos" do aplicativo ou
+                            na
+                            secretaria.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#q3">
+                            <span class="material-icons-round text-green me-3">school</span>
+                            Onde vejo as notas do meu filho?
+                        </button>
+                    </h2>
+                    <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body text-secondary">
+                            As notas estão disponíveis no menu "Boletim" ou "Notas", separadas por bimestre e
+                            disciplina.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="text-center mt-5">
+            <p class="text-secondary mb-1">Estamos aqui para ajudar, Mamã! ❤️</p>
+            <small class="text-muted">© 2024 DeiSchool - Educação Simplificada</small>
+        </footer>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

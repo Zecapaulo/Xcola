@@ -9,6 +9,21 @@
             --ds-orange: #e67e22;
             --ds-radius: 20px;
             --bs-body-bg: #0f172a;
+
+            --bg-deep: #0f172a;
+            /* Fundo da página */
+            --card-dark: #1e293b;
+            /* Fundo dos cartões principais */
+            --item-dark: #334155;
+            /* Fundo dos itens de FAQ */
+            --green-vibrant: #22c55e;
+            /* Verde neon do TPC */
+            --blue-vibrant: #3b82f6;
+            /* Azul vibrante */
+            --text-main: #f8fafc;
+            /* Branco suave */
+            --text-muted: #94a3b8;
+            /* Cinza azulado */
         }
 
         body {
@@ -819,4 +834,808 @@
         .btn-help:hover {
             background: #7C3AED;
             color: white;
+        }
+
+        /* --- COMPONENTES DA PÁGINA DE PAGAMENTOS --- */
+
+        /* 1. Cards Gerais */
+        .payment-card {
+            background: var(--card-bg);
+            /* Usa a variável do tema anterior */
+            border-radius: 24px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        /* 2. Badge Pendente */
+        .badge-pending {
+            background-color: #ffedd5;
+            color: #f97316;
+            border-radius: 50px;
+            padding: 8px 16px;
+            font-weight: 700;
+            font-size: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .dot-pending {
+            width: 8px;
+            height: 8px;
+            background-color: #f97316;
+            border-radius: 50%;
+        }
+
+        /* 3. Tipografia de Preço */
+        .text-green {
+            color: #22c55e;
+        }
+
+        /* 4. Divisor Tracejado */
+        .dashed-divider {
+            border-bottom: 2px dashed #e2e8f0;
+            width: 100%;
+        }
+
+        /* 5. Info Box (Azulzinha) */
+        .info-box {
+            background-color: #f1f5f9;
+            border-radius: 16px;
+            padding: 16px;
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+        }
+
+        /* 6. Input M-Pesa Customizado */
+        .mpesa-input-wrapper {
+            position: relative;
+        }
+
+        .mpesa-input {
+            height: 55px;
+            border-radius: 16px;
+            padding-left: 50px;
+            /* Espaço para o ícone */
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-sec);
+            /* Cinza do texto */
+            border: 1px solid #cbd5e1;
+            background-color: transparent;
+        }
+
+        .mpesa-input:focus {
+            border-color: #f97316;
+            box-shadow: 0 0 0 4px rgba(249, 115, 22, 0.1);
+        }
+
+        .input-icon {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #94a3b8;
+            font-size: 24px;
+        }
+
+        /* 7. Botão M-Pesa (Laranja) */
+        .btn-mpesa {
+            background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+            border: none;
+            color: white;
+            height: 55px;
+            border-radius: 16px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.2s ease;
+        }
+
+        .btn-mpesa:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(234, 88, 12, 0.3);
+            color: white;
+        }
+
+        /* 8. Lista de Histórico */
+        .history-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 12px;
+            border-radius: 16px;
+            border: 1px solid transparent;
+            transition: background 0.2s;
+            background-color: #f8f9fa;
+        }
+
+        .history-item:hover {
+            background-color: rgba(0, 0, 0, 0.02);
+        }
+
+        .icon-circle-success {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #dcfce7;
+            color: #16a34a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .x-small {
+            font-size: 0.75rem;
+        }
+
+        /* 9. Card Ajuda (Footer Direito) */
+        .help-card {
+            background-color: #dcfce7;
+            /* Fundo verde claro da imagem */
+            border-radius: 24px;
+            padding: 30px;
+            border: 1px solid #bbf7d0;
+        }
+
+        .help-icon-circle {
+            width: 50px;
+            height: 50px;
+            background-color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        /* --- AJUSTES DARK MODE --- */
+        [data-bs-theme="dark"] .dashed-divider {
+            border-color: #334155;
+        }
+
+        [data-bs-theme="dark"] .info-box {
+            background-color: #334155;
+            color: #cbd5e1;
+        }
+
+        [data-bs-theme="dark"] .mpesa-input {
+            border-color: #475569;
+            color: white;
+        }
+
+        [data-bs-theme="dark"] .history-item:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+
+        [data-bs-theme="dark"] .icon-circle-success {
+            background-color: rgba(22, 163, 74, 0.2);
+            color: #4ade80;
+        }
+
+        [data-bs-theme="dark"] .help-card {
+            background-color: rgba(22, 163, 74, 0.15);
+            /* Verde escuro translúcido */
+            border-color: rgba(22, 163, 74, 0.3);
+        }
+
+        [data-bs-theme="dark"] .help-card h6 {
+            color: #fff !important;
+        }
+
+        [data-bs-theme="dark"] .help-card p {
+            color: #cbd5e1 !important;
+        }
+
+
+
+
+        /* NOTAS */
+
+        /* --- PÁGINA DE NOTAS (GRADES) --- */
+
+        /* Cores Semafóricas */
+        :root {
+            --color-green: #22c55e;
+            --color-green-light: #dcfce7;
+            --color-red: #ef4444;
+            --color-red-light: #fee2e2;
+            --color-yellow: #eab308;
+            --color-yellow-light: #fef9c3;
+            --color-blue-freq: #3b82f6;
+            --color-blue-freq-bg: #eff6ff;
+        }
+
+        /* 1. Header & Badge */
+        .frequency-badge {
+            background-color: var(--color-blue-freq-bg);
+            color: var(--color-blue-freq);
+            padding: 12px 24px;
+            border-radius: 16px;
+            align-items: center;
+        }
+
+        [data-bs-theme="dark"] .frequency-badge {
+            background-color: rgba(59, 130, 246, 0.15);
+            color: #60a5fa;
+        }
+
+        /* 2. Cards de Notas */
+        .grade-card {
+            background: var(--card-bg);
+            border-radius: 24px;
+            padding: 24px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.2s;
+        }
+
+        .grade-card:hover {
+            transform: translateY(-3px);
+        }
+
+        /* Borda Esquerda Colorida (A marca visual importante) */
+        .grade-card::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 6px;
+        }
+
+        .status-green::before {
+            background-color: var(--color-green);
+        }
+
+        .status-red::before {
+            background-color: var(--color-red);
+        }
+
+        .status-yellow::before {
+            background-color: var(--color-yellow);
+        }
+
+        /* Ícones de Canto (Stamps) */
+        .icon-stamp {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .bg-green-light {
+            background-color: var(--color-green-light);
+            color: var(--color-green);
+        }
+
+        .bg-red-light {
+            background-color: var(--color-red-light);
+            color: var(--color-red);
+        }
+
+        .bg-yellow-light {
+            background-color: var(--color-yellow-light);
+            color: var(--color-yellow);
+        }
+
+        /* Botão Detalhes */
+        .btn-details {
+            background-color: #f8fafc;
+            color: #64748b;
+            border: none;
+            padding: 12px;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+        }
+
+        .btn-details:hover {
+            background-color: #e2e8f0;
+            color: #1e293b;
+        }
+
+        /* 3. Gráfico de Progresso (Custom Chart) */
+        .chart-card {
+            background: var(--card-bg);
+            border-radius: 24px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+        }
+
+        .chart-container {
+            height: 250px;
+            position: relative;
+            margin-top: 20px;
+            padding-bottom: 30px;
+            /* Espaço para labels X */
+        }
+
+        /* Linhas de Grade */
+        .chart-grid-line {
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 1px;
+            border-top: 1px dashed #e2e8f0;
+            width: 100%;
+        }
+
+        /* Container das Barras */
+        .chart-bars-wrapper {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-end;
+            height: 100%;
+            position: relative;
+            z-index: 2;
+            padding: 0 20px;
+        }
+
+        .chart-column {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            height: 100%;
+            width: 60px;
+            position: relative;
+        }
+
+        .bar-fill {
+            width: 100%;
+            /* Largura da barra */
+            border-radius: 15px 15px 0 0;
+            /* Topo arredondado como na imagem */
+            transition: height 1s ease-out;
+            max-width: 50px;
+        }
+
+        .bg-success-soft {
+            background-color: #dcfce7;
+            border: 2px solid #22c55e;
+            border-bottom: none;
+        }
+
+        .x-axis-label {
+            margin-top: 10px;
+            font-size: 0.85rem;
+            color: var(--text-sec);
+            font-weight: 500;
+        }
+
+        /* Badge Flutuante (8.2) */
+        .floating-tag {
+            position: absolute;
+            bottom: 85%;
+            /* Ajusta conforme a altura da barra */
+            background: white;
+            color: #1e293b;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .dot-legend {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        /* --- AJUSTES DARK MODE --- */
+        [data-bs-theme="dark"] .bg-green-light {
+            background-color: rgba(34, 197, 94, 0.2);
+        }
+
+        [data-bs-theme="dark"] .bg-red-light {
+            background-color: rgba(239, 68, 68, 0.2);
+        }
+
+        [data-bs-theme="dark"] .bg-yellow-light {
+            background-color: rgba(234, 179, 8, 0.2);
+        }
+
+        [data-bs-theme="dark"] .btn-details {
+            background-color: #334155;
+            color: #cbd5e1;
+        }
+
+        [data-bs-theme="dark"] .btn-details:hover {
+            background-color: #475569;
+            color: white;
+        }
+
+        [data-bs-theme="dark"] .chart-grid-line {
+            border-color: #334155;
+        }
+
+        [data-bs-theme="dark"] .floating-tag {
+            background-color: #1e293b;
+            color: white;
+            border-color: #334155;
+        }
+
+        [data-bs-theme="dark"] .bg-success-soft {
+            background-color: rgba(34, 197, 94, 0.2);
+            border-color: #22c55e;
+        }
+
+
+
+
+
+        /* PRESENCE */
+
+
+        /* --- PÁGINA DE PRESENÇAS --- */
+
+        /* 1. Botão de Data (Amarelo Suave) */
+        .btn-date-picker {
+            background-color: #fefce8;
+            /* Amarelo muito claro */
+            border: 1px solid #fef08a;
+            padding: 10px 20px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            transition: all 0.2s;
+        }
+
+        .btn-date-picker:hover {
+            background-color: #fef9c3;
+            transform: translateY(-2px);
+        }
+
+        /* 2. Cartões de Resumo (Stats) */
+        .stat-card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+            position: relative;
+            overflow: hidden;
+            /* Importante para a borda lateral */
+        }
+
+        /* A borda grossa lateral colorida */
+        .border-accent-green::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 8px;
+            background-color: #22c55e;
+            border-radius: 4px 0 0 4px;
+        }
+
+        .border-accent-red::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 8px;
+            background-color: #ef4444;
+            border-radius: 4px 0 0 4px;
+        }
+
+        /* Ícones dos Cards (Círculos com fundo claro) */
+        .icon-circle-danger {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background-color: #fee2e2;
+            color: #ef4444;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* (Reutilizando icon-circle-success do código anterior ou definindo aqui) */
+        .icon-circle-success {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background-color: #dcfce7;
+            color: #16a34a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* 3. Container do Calendário */
+        .calendar-card {
+            background: var(--card-bg);
+            border-radius: 24px;
+            padding: 30px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+        }
+
+        .btn-icon-sm {
+            background: transparent;
+            border: none;
+            color: var(--text-sec);
+            border-radius: 50%;
+            padding: 8px;
+        }
+
+        .btn-icon-sm:hover {
+            background-color: rgba(0, 0, 0, 0.05);
+            color: var(--text-main);
+        }
+
+        .tracking-wide {
+            letter-spacing: 1px;
+        }
+
+        /* 4. A Grelha do Calendário (CSS Grid) */
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            /* 7 colunas iguais */
+            gap: 10px 8px;
+            /* Espaço vertical / horizontal */
+            text-align: center;
+        }
+
+        /* Labels da semana (SEG, TER...) */
+        .day-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: #94a3b8;
+            margin-bottom: 10px;
+        }
+
+        /* 5. Células dos Dias (Bolinhas) */
+        .day-item {
+            aspect-ratio: 1;
+            /* Mantém sempre quadrado */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-weight: 600;
+            font-size: 1rem;
+            color: var(--text-sec);
+            margin: 0 auto;
+            width: 100%;
+            max-width: 45px;
+            /* Tamanho máximo da bolinha */
+            cursor: default;
+        }
+
+        /* Variantes de Estado */
+        .day-item.present {
+            background-color: #22c55e;
+            color: white;
+            box-shadow: 0 4px 10px rgba(34, 197, 94, 0.3);
+        }
+
+        .day-item.absent {
+            background-color: #ef4444;
+            color: white;
+            box-shadow: 0 4px 10px rgba(239, 68, 68, 0.3);
+            position: relative;
+        }
+
+        /* Pequeno indicador de 'x' se quiser detalhe extra, mas a cor já diz tudo */
+
+        .day-item.weekend {
+            background-color: #f1f5f9;
+            color: #94a3b8;
+        }
+
+        .day-item.ghost {
+            background-color: transparent;
+            color: #cbd5e1;
+            border: 2px dashed #e2e8f0;
+        }
+
+        /* 6. Legenda (Footer) */
+        .legend-pill {
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border: 1px solid transparent;
+        }
+
+        .legend-pill.success {
+            background-color: white;
+            color: #15803d;
+            border-color: #e2e8f0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+        }
+
+        .legend-pill.danger {
+            background-color: white;
+            color: #b91c1c;
+            border-color: #e2e8f0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+        }
+
+        /* --- AJUSTES DARK MODE --- */
+        [data-bs-theme="dark"] .btn-date-picker {
+            background-color: #334155;
+            border-color: #475569;
+        }
+
+        [data-bs-theme="dark"] .btn-date-picker .text-dark {
+            color: #f1f5f9 !important;
+        }
+
+        [data-bs-theme="dark"] .day-item.weekend {
+            background-color: #1e293b;
+            color: #64748b;
+        }
+
+        [data-bs-theme="dark"] .day-item.ghost {
+            border-color: #334155;
+            color: #475569;
+        }
+
+        [data-bs-theme="dark"] .legend-pill {
+            background-color: #1e293b;
+            border-color: #334155;
+        }
+
+        [data-bs-theme="dark"] .legend-pill.success {
+            color: #4ade80;
+        }
+
+        [data-bs-theme="dark"] .legend-pill.danger {
+            color: #f87171;
+        }
+
+
+
+        /* ajuda */
+
+        /* --- ESTILOS CENTRO DE AJUDA (VERSÃO PROFISSIONAL ULTRA) --- */
+
+        /* 1. ESTILO MODO LIGHT (Padrão imagem image_8e52cc.png) */
+        .help-action-card {
+            background: #ffffff;
+            border-radius: 30px;
+            padding: 30px;
+            position: relative;
+            overflow: hidden;
+            border: none;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .help-action-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Marca d'água de ícone (Fundo Light) */
+        .help-watermark {
+            position: absolute;
+            top: 10px;
+            right: -10px;
+            font-size: 120px !important;
+            color: #000;
+            opacity: 0.04;
+            /* Quase invisível no fundo branco */
+            transform: rotate(-15deg);
+            pointer-events: none;
+        }
+
+        /* Botões com os tons vibrantes da imagem image_8e52cc.png */
+        .btn-help-green {
+            background: #2ecc71;
+            color: white;
+            border: none;
+            border-radius: 15px;
+            padding: 12px;
+            font-weight: 600;
+        }
+
+        .btn-help-whatsapp {
+            background: #2ecc71;
+            color: white;
+            border: none;
+            border-radius: 15px;
+            padding: 12px;
+            font-weight: 600;
+        }
+
+        .btn-help-blue {
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 15px;
+            padding: 12px;
+            font-weight: 600;
+        }
+
+        /* Container do FAQ Light */
+        .faq-container {
+            background: #ffffff;
+            border-radius: 30px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.02);
+        }
+
+        .vertical-bar-green {
+            width: 5px;
+            height: 30px;
+            background-color: #2ecc71;
+            border-radius: 10px;
+        }
+
+        /* Acordeão Light (Fundo cinza muito claro conforme imagem image_8e528a.png) */
+        .accordion-item {
+            border: none !important;
+            background-color: #f8fafc !important;
+            /* Cor exata da referência */
+            border-radius: 20px !important;
+            overflow: hidden;
+            margin-bottom: 15px;
+        }
+
+        .accordion-button {
+            background-color: transparent !important;
+            box-shadow: none !important;
+            padding: 20px;
+            font-weight: 600;
+            color: #1e293b !important;
+        }
+
+        .accordion-button:not(.collapsed) {
+            color: #2ecc71 !important;
+        }
+
+        /* --- 2. ADAPTAÇÃO AUTOMÁTICA PARA MODO DARK --- */
+        /* (Ativa apenas se o body tiver data-bs-theme="dark") */
+
+        [data-bs-theme="dark"] .help-action-card,
+        [data-bs-theme="dark"] .faq-container {
+            background: #1e293b;
+            /* Fundo Slate escuro */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        [data-bs-theme="dark"] .help-watermark {
+            color: #ffffff;
+            opacity: 0.03;
+        }
+
+        [data-bs-theme="dark"] .accordion-item {
+            background-color: #0f172a !important;
+            /* Fundo Deep Blue */
+            border: 1px solid rgba(255, 255, 255, 0.05) !important;
+        }
+
+        [data-bs-theme="dark"] .accordion-button {
+            color: #f8fafc !important;
+        }
+
+        [data-bs-theme="dark"] .help-action-card h5,
+        [data-bs-theme="dark"] .faq-container h4 {
+            color: #ffffff;
+        }
+
+        [data-bs-theme="dark"] .help-action-card p {
+            color: #94a3b8;
         }

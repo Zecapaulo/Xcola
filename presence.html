@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt" data-bs-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeiSchool Dashboard</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <div class="logo-box">D</div>
+                <span class="fw-bold fs-4" style="letter-spacing: -0.5px;">DeiSchool</span>
+            </a>
+
+            <button class="d-lg-none btn btn-link text-decoration-none p-0 theme-toggle-btn ms-auto me-2"
+                style="color: #64748b;">
+                <span class="material-icons-round fs-3 theme-icon-content text-warning">light_mode</span>
+            </button>
+
+            <button class="navbar-toggler border-0 p-0" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+                <div class="profile-container-mobile">
+                    <img src="https://i.pravatar.cc/150?img=5" alt="Mamã" class="profile-avatar"
+                        style="width: 32px; height: 32px; border-radius: 50%; border: 2px solid #7C3AED;">
+                    <span class="fw-bold text-dark dark:text-white" style="font-size: 0.9rem;">Mamã</span>
+                </div>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto text-end">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Dashboards</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Mensagens</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Eventos</a>
+                    </li>
+
+                    <hr>
+                    <li class="nav-item d-lg-none">
+                        <a class="nav-link d-flex align-items-center justify-content-end" href="profile.html">
+                            Meu Perfil <span class="material-icons-round">account_circle</span>
+                        </a>
+                    </li>
+                    <li class="nav-item d-lg-none">
+                        <a class="nav-link d-flex align-items-center justify-content-end text-danger" href="#">
+                            Sair <span class="material-icons-round">logout</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="d-none d-lg-flex align-items-center gap-3 ms-lg-3">
+                    <button class="btn btn-link text-decoration-none p-0 theme-toggle-btn" style="color: #64748b;">
+                        <span class="material-icons-round fs-3 theme-icon-content text-warning">light_mode</span>
+                    </button>
+
+                    <div class="dropdown">
+                        <div class="profile-pill dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"
+                            style="cursor: pointer;">
+                            <img src="https://i.pravatar.cc/150?img=5" alt="Avatar" class="profile-avatar">
+                            <span class="fw-bold pe-2 fs-6">Mamã</span>
+                        </div>
+
+                        <ul class="dropdown-menu dropdown-menu-end shadow-lg border-0 mt-2">
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center gap-2 py-2" href="profile.html">
+                                    <span class="material-icons-round fs-5">account_circle</span> Meu Perfil
+                                </a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider opacity-10">
+                            </li>
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center gap-2 py-2 text-danger" href="#">
+                                    <span class="material-icons-round fs-5">logout</span> Sair
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </nav>
+    <main class="container py-5">
+
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3 mb-5">
+            <div class="d-flex align-items-center gap-3">
+                <a href="index.html" class="btn-back shadow-sm">
+                    <span class="material-icons-round text-dark">arrow_back</span>
+                </a>
+                <div>
+                    <h2 class="fw-bold mb-0 text-dark">Presenças do João</h2>
+                    <p class="text-secondary mb-0">Acompanhe o dia a dia escolar</p>
+                </div>
+            </div>
+
+            <button class="btn btn-date-picker shadow-sm">
+                <span class="material-icons-round text-warning me-2">calendar_today</span>
+                <span class="fw-bold text-dark">Outubro 2023</span>
+            </button>
+        </div>
+
+        <div class="row g-4 mb-4">
+            <div class="col-12 col-md-6">
+                <div class="stat-card border-accent-green">
+                    <div>
+                        <span class="d-block text-secondary fw-medium mb-1">Total de Presenças</span>
+                        <h2 class="display-5 fw-bold text-dark mb-0">18 <span
+                                class="fs-6 text-secondary fw-normal">dias</span></h2>
+                    </div>
+                    <div class="icon-circle-success">
+                        <span class="material-icons-round fs-4">check</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+                <div class="stat-card border-accent-red">
+                    <div>
+                        <span class="d-block text-secondary fw-medium mb-1">Total de Faltas</span>
+                        <h2 class="display-5 fw-bold text-dark mb-0">2 <span
+                                class="fs-6 text-secondary fw-normal">dias</span></h2>
+                    </div>
+                    <div class="icon-circle-danger">
+                        <span class="material-icons-round fs-4">close</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="calendar-card">
+
+            <div class="d-flex justify-content-between align-items-center mb-4 px-2">
+                <button class="btn btn-icon-sm"><span class="material-icons-round">chevron_left</span></button>
+                <h5 class="fw-bold text-dark text-uppercase mb-0 tracking-wide">Outubro 2023</h5>
+                <button class="btn btn-icon-sm"><span class="material-icons-round">chevron_right</span></button>
+            </div>
+
+            <div class="calendar-grid mb-2">
+                <div class="day-label">SEG</div>
+                <div class="day-label">TER</div>
+                <div class="day-label">QUA</div>
+                <div class="day-label">QUI</div>
+                <div class="day-label">SEX</div>
+                <div class="day-label text-warning">SÁB</div>
+                <div class="day-label text-warning">DOM</div>
+            </div>
+
+            <div class="calendar-grid days-grid">
+                <div class="day-empty"></div>
+                <div class="day-empty"></div>
+                <div class="day-empty"></div>
+                <div class="day-empty"></div>
+                <div class="day-empty"></div>
+                <div class="day-empty"></div>
+                <div class="day-item weekend">1</div>
+                <div class="day-item present">2</div>
+                <div class="day-item present">3</div>
+                <div class="day-item absent">4</div>
+                <div class="day-item present">5</div>
+                <div class="day-item present">6</div>
+                <div class="day-item weekend">7</div>
+                <div class="day-item weekend">8</div>
+
+                <div class="day-item present">9</div>
+                <div class="day-item present">10</div>
+                <div class="day-item present">11</div>
+                <div class="day-item present">12</div>
+                <div class="day-item present">13</div>
+                <div class="day-item weekend">14</div>
+                <div class="day-item weekend">15</div>
+
+                <div class="day-item absent">16</div>
+                <div class="day-item present">17</div>
+                <div class="day-item present">18</div>
+                <div class="day-item present">19</div>
+                <div class="day-item present">20</div>
+                <div class="day-item weekend">21</div>
+                <div class="day-item weekend">22</div>
+
+                <div class="day-item present">23</div>
+                <div class="day-item present">24</div>
+                <div class="day-item present">25</div>
+                <div class="day-item present">26</div>
+                <div class="day-item ghost">27</div>
+                <div class="day-item weekend">28</div>
+                <div class="day-item weekend">29</div>
+
+                <div class="day-item ghost">30</div>
+                <div class="day-item ghost">31</div>
+            </div>
+
+            <hr class="my-4 opacity-10">
+
+            <div class="d-flex justify-content-center gap-4 flex-wrap">
+                <div class="legend-pill success">
+                    <span class="material-icons-round fs-6">check_circle</span> Verde = Na Escola
+                </div>
+                <div class="legend-pill danger">
+                    <span class="material-icons-round fs-6">cancel</span> Vermelho = Faltou
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
